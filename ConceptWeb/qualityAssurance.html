@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quality Assurance</title>
+</head>
+<body>
+  <header>
+      <h2>Quality Assurance</h2>
+      <hr>
+       <nav>
+          
+           <button>
+               <a href="#basic">Basic Ideas</a>
+           </button>  
+            <button>
+               <a href="#QA_QC">QA QC Testing</a>
+           </button>       
+            <button>
+               <a href="#testing">Diff types of Tesing</a>
+           </button>       
+            <button>
+               <a href="#stlc">Software Test Life Cycle</a>
+           </button> 
+                          
+            <button>
+               <a href="#DDT">Data Driven Testing</a>
+           </button>                
+            <button>
+               <a href="#TDD">Test Driven Development</a>
+           </button>            
+            <button>
+               <a href="#tools">Tools</a>
+           </button>  
+            <button>
+               <a href="#build_release">Build and Release</a>
+           </button>             
+            <button>
+               <a href="#user_case_story">Use Case and User Stories</a>
+           </button>        
+            <button>
+               <a href="#valid_verify">Validation and Verification</a>
+           </button> 
+           
+           
+            <button>
+               <a href="#bug">Bugs</a>
+           </button>             
+            <button>
+               <a href="#doc">Documentation</a>
+           </button> 
+            <button>
+               <a href="#plan_strategy">Test plan and test strategy</a>
+           </button>          
+              
+            <button>
+               <a href="#coverage">Test good coverage?</a>
+           </button>
+              
+            <button>
+               <a href="#responsibility">Roles of SQA engineer</a>
+           </button>
+            
+            <button>
+               <a href="#problem">Common solution for SD problem</a>
+           </button>
+           
+           <button>
+               <a href="#terms">terminology</a>
+           </button>
+           
+       </nav>
+    </header>
+    
+    <div>
+        <p id="basic">
+           <h3>Basic ideas</h3>
+            <ul>
+                <li><b>Testcase: </b>specific condition to check against program; info of test steps + prerequisites + testing environment + outputs</li>
+            </ul>            
+            <ul>
+                <li><b>Test Suite: </b>a collection of testcases that are used to test a software program</li>
+            </ul>
+            <ul>
+                <li><b>Test fixture: </b>ensures a stable/fixed test environment</li>
+            </ul>
+        </p>          
+          
+          <p id="QA_QC">
+           <h3>QA vs. QC vs. Testing</h3>
+            <ul>
+                <li>Quality Assurance: monitor the quality of <b>process</b></li>
+                <li>Quality Control: the process of finding bugs &amp; providing solution</li>
+                <li>Testing: ensure the functionality of the <b>final product</b></li>
+            </ul>
+        </p>   
+        <p id="TDD">
+           <h3>TDD/Test Driven Development</h3>
+            <ul>
+                <li>prepare test cases before writing the actual code</li>
+                <li>Do necessary minimum to make the test pass</li>
+                <li>repeat this process until the whole functionality is implemented</li>
+                <li>software development process that relies on repetition of very short cycle of <b>automated test case</b> + <b>function to test</b></li>
+                <li><a href="https://technologyconversations.com/2013/12/20/test-driven-development-tdd-example-walkthrough/" target="_blank">walkthru</a></li>
+                <ul><b>Process</b>
+                    <li>Add a test</li>
+                    <li>Run all tests and see if the new one fails</li>
+                    <li>write some code</li>
+                    <li>run tests</li>
+                    <li>refactor code</li>
+                    <li>repeat the process</li>
+                </ul>
+  
+            </ul>
+        </p>        
+        
+        <p id="testing">
+           <h3>Different types of tesing</h3>
+            <ul>
+                <li>Black-box testing: test output on given input (code/error not visible, hard to design test case)</li>
+                <li>White-box testing: test specific scenarios on the given code (focus on the existing software; cannot discover missing functionality)</li>
+                <li><b>AGILE</b> testing: starts along with the beginning of the product development process; follows the rules of AGILE software development, focus on how people working on the project together, during the development process, the development team and testing team should always figure the solution corresponding to the customers requirement change</li>
+                <li>Unit -> Intergration -> System -> Acceptance</li>
+                    <ul>
+                        <li><b>Unit</b> testing: test on a unit of the software, such as a function/module</li>
+                        <li><b>Intergration</b> testing: test on class or project, which is the combination of those simple units</li>
+                        <li><b>System</b> testing: test on a complete and integrated software to check if the software meet requirements</li>
+                        <li><b>Acceptance</b> (actual output vs. expected output): test the actual customer requirements against the system output</li>
+                    </ul>
+                <li><b>Regression</b> testing: make sure that the old functionalities still work after adding the new features/functionalities. (because AGILE development, software keeps updating) </li>
+                <li><b><em>Automated testing</em></b></li>
+                    <ul>
+                       <li><b>Using separated script/software to test the target software and process the result verification. The whole process should be automated</b></li>
+                       <ul>
+                           <b>eg: </b>automated test a Web APP by writing a script:
+                           <li>script calls API with various data</li>
+                           <li>it checks and compares the returned results</li>
+                       </ul>
+                       <li>essential for <em>continuous delivery</em> and <em>continuous testing</em></li>
+                        <li>automation test plan strategy</li>
+                            <ul>
+                                <li>preparation + recording scenario + error handling + script enhancement (adding chk points &amp; loops) + debugging script + return script + report result</li>
+                            </ul>
+                    </ul>
+                    <ul>
+                        <li>Challenge while testing</li>
+                            <ul>
+                                <li><b>Tool: </b>Mastering the automation tool</li>
+                                <li><b>Reusability</b> of Automation script</li>
+                                <li><b>Adaptability</b> of test case for automation</li>
+                                <li>Automating <b>complex test cases</b></li>
+                            </ul>
+                    </ul>
+                    
+                <li>Functional &amp; Non-Functional testing</li>
+                    <ul>
+                        <li>Functional: test the functionality of the software; it checks what it "supposed to do" from a functional perspective</li>
+                        <li>Non-Functional: check performance/code reusability/reliability</li>
+                    </ul>
+                <li>Positive &amp; Negative testing</li>
+                    <ul>
+                        <li><b>Positive: </b>determine if the app works as expected, test fails if error is detected</li>
+                        <li><b>Negative:</b> ensures the "Error msg" matches the "Error type"</li>
+                    </ul>
+                <li><b>Explory</b> testing: aims to find possible issues which are beyond automated tests; find potentail problems on high risk areas (focus on new features)</li>
+                <li>Smoke testing(AKA build-verification test): ensures the most important functionalities work (as long as the product does not catch fire)</li>
+                <li>Volumn vs. Load vs. Stress testing</li>
+                    <ul>
+                        <li>Volumn test: check if system can process the required # of data</li>
+                        <li>Load test: check if system work under heavy but expected data load</li>
+                        <li>Stress test: test system when the load is beyond system limit</li>
+                    </ul>
+                <li>Branch &amp; Boundary testing</li>
+                    <ul>
+                        <li>Branch: test all branches of the code</li>
+                        <li>Boundary: focus on limit conditions</li>
+                    </ul>
+                <li>Thread testing: usually conducted at early stage of Integration Testing; focus on the integration activities rather than the full development life cycle</li>
+                <li>Ad Hoc testing: tester breaks system by randomly trying its functionality</li>
+                <li>GRUD test: Create/Read/Update/Delete; can be done using SQL statements</li>
+                
+            </ul>
+        </p>
+        
+        <p id="tools">
+           <h3>Tools for testing</h3>
+            <ul>
+                <li>Testware: Test case + test data + test plan used to design and execute a test
+</li>
+                <li>Testing softwares: selenium, Firebug, OpenSTA, WinSCP</li>
+                <li><b>Automation Tools:</b> QTP, WinRunner</li>
+                <li><b>Test Management Tools: </b>JIRA, Quality Center</li>
+                <li>Defect Management Tools: Test Director, Bugzilla</li>
+                <li><b>Project Management Tools: </b>Sharepoint</li>
+            </ul>
+        </p>  
+        <p id="stlc">
+           <h3>Software Test Life Cycle</h3>
+            <ul>
+               <h4>8 phrases</h4>
+                <li>requirements: read to ensure all features are testable</li>
+                <li>planning: identify resources needed to help to meet the testing objectives</li>
+                <li>analysis: risk and resources; detailed test condition doc.</li>
+                <li>design: how to test, which test to use</li>
+                <li>implementation: come up with detailed test cases</li>
+                <li>execution</li>
+                <li>conclusion: Daily Status Report &amp; Weekly Status Report (DSR, WSR)</li>
+                <li>closure: check the completeness and requirements</li>
+                
+            </ul>
+        </p>          
+        
+        <p id="build_release">
+           <h3>Build vs. Release</h3>
+            <ul>
+                <li>Build (number): dev team --> testing team; version of pre-released format</li>
+                <li>Release (number): dev/testing team --> customer; version after release </li>
+            </ul>
+        </p>             
+        <p id="user_case_story">
+           <h3>Use case vs. User stories</h3>
+            <ul>
+                <li><b>use case: </b>describe how the system should act: BtnA will trigger ... </li>
+                <li><b>use stories: </b>focus on the result, what user can get: user is able to ... by clicking BtnA </li>
+                
+            </ul>
+        </p>           
+        
+        <p id="valid_verify">
+           <h3>Validation and Verification</h3>
+            <ul>
+                <li>Validation: process of evaluating the <b>final product</b> to check if it meets the requirement</li>
+                <li>Verification: process of evaluating the <b>intermediate work</b> to check if we are on track</li>
+                
+            </ul>
+        </p>         
+        <p id="plan_strategy">
+           <h3>Test Plan vs. Test Strategy</h3>
+            <ul>
+                <li>Test Plan: specific, fall under project, specific part of code</li>
+                <li>Test Strategy: higher level, for the entire project</li>
+            </ul>
+        </p>  
+        
+        <p id="coverage">
+           <h3>How to ensure the test is complete and has a good coverage?</h3>
+            <ul>
+                <li>Requirement Traceability Matrix (RTM): map adn trace user requirements with test doc</li>
+                <li>Test Coverage Matrix: measures the amount of testing performed by a set of tests; maps scripts to requirements</li>
+                
+            </ul>
+        </p>     
+        <p id="bug">
+           <h3>Bug Cycle</h3>
+            <ul>
+               <h4>8 steps</h4>
+                <li>Test found bug --> assign to development manager who is in open status</li>
+                <li>if Bug: development team fix it</li>
+                <li>elif !Bug: ignore Bug; mark it <u>rejected</u></li>
+                <li>if Bug not in current release: mark <u>postponed</u></li>
+                <li>if Bug raised earlier: mark <u>Duplicated</u></li>
+                <li>if Bug is assigned to developer to fix, mark <u>in Progress</u></li>
+                <li>if Bug is fixed, mark <u>Fixed</u></li>
+                <li>if pass final test, mark <u>closed</u></li>
+                
+            </ul>
+            <h3>Bug Leakage vs. Bug Release</h3>
+            <ul>
+                <li>Bug Leakage: found by user</li>
+                <li>Bug Release: found by tester/developer; release with known bug (not essential)</li>
+            </ul>
+            <h3>Bug Triage (classification)</h3>
+               <ul> <b>process to:</b>
+                    <li>Ensure bug report completeness</li>
+                    <li>Assign and analyze the bug</li>
+                    <li>Assigning bug to proper bug owner</li>
+                    <li>Adjust bug severity properly</li>
+                    <li>Set appropriate bug priority</li>
+                </ul>
+            </p> 
+        <p id="doc">
+            <h3>Testing Documentations</h3>
+            <ul>
+                <li>Requirement Document</li>
+                <li>Test Coverage Matrix</li>
+                <li>Test case and test plan</li>
+                <li>Test cases and test plan</li>
+                <li>task distribution flow chart</li>
+                <li>transaction mix</li>
+                <li>user profiles</li>
+                <li>test log</li>
+                <li>user profiles</li>
+                <li>test incident report</li>
+                <li>test summary report</li>
+            </ul>
+            <h3>SQL doc should include:</h3>
+            <ul>
+                <li>list the number of bugs detected per severity level</li>
+                <li>explain each requirement</li>
+                <li>test design</li>
+                <li>specification: which test suites and test case to run</li>
+                <li>inspection reports</li>
+                <li>configuration</li>
+                <li>code change</li>
+                <li>business rules</li>
+                <li>test plan and test case</li>
+                <li>bug reports</li>
+                <li>user manuals</li>
+                <li>reports for manager and user</li>
+            </ul>
+        </p>        
+        <p id="responsibility">
+            <h3>Roles of SQA engineer</h3>
+            <ul>
+                <li>writing source code</li>
+                <li>control/maintain source code</li>
+                <li>reviewing code</li>
+                <li>change management</li>
+                <li>configuration management</li>
+                <li>software integration</li>
+                <li>software testing</li>
+                <li>release management process</li>
+            </ul>
+        </p>        
+        
+        <p id="problem">
+            <h3>Common solutions for SD problem</h3>
+            <ul>
+            <li>setting up the requirements criteria, the requirements of a software should be complete, clear and agreed by all</li>
+            <li>realistic schedule: time for planning, designing, testing, fixing bugs and re-testing</li>
+            <li>adequate testing: start testing immediately after one or more modules development</li>
+            <li>use rapid prototype during design phrase so that it can be easy for customers to find what to expect</li>
+            <li>use team collabration tools</li>
+
+            </ul>
+        </p>
+        <p id="terms">
+            <h3>Terminologies</h3>
+            <ul>
+                <li><b>Cyclomatic Complexity Number:</b> standard to check # of testing a piece of code needs</li>
+                <ul>standards:
+                    <li>is the feature testable?</li>
+                    <li>is the feature understood by everyone?</li>
+                    <li>is the feature reliable enough?</li>
+                </ul>
+                <li>R, requirement traceability matrix (RTM)</li>
+                <li>R, Test Coverage Matrix: maps scripts to requirements</li>
+            </ul>
+        </p>
+        
+         
+          
+            
+    </div>
+
+    
+    <footer>
+       <hr>
+        <img src="img/mega_slap.png" alt="">
+    </footer>
+    
+</body>
+</html>
